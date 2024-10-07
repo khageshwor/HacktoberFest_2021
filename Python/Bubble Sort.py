@@ -1,11 +1,11 @@
 def bubblesort(array):
-    for i in range(len(array)):
-        for j in range(len(array) - 1):
+    length = len(array)   # will contribute to less time complexity
+    for i in range(length):
+        for j in range(length - 1):
             nextIndex = j + 1
             if array[j] > array[nextIndex]:
                 smallernum = array[nextIndex]
-                largernum = array[j]
-                array[nextIndex] = largernum
+                array[nextIndex] = array[j]
                 array[j] = smallernum
     return array
 
